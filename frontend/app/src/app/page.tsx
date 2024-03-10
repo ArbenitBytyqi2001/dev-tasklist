@@ -6,13 +6,16 @@ import BookingList from "./components/BookingsList";
 
 
 const Home: React.FC = async () => {
-const bookings = await getBookings()
+  const bookings = await getBookings()
 
 
   return (
     <div>
       <h1>Current booking count: {bookings.length}</h1>
-      <BookingList/>
+      <BookingList />
+      <Link href="postBooking"> 
+      <button>BOOK NOW</button>
+      </Link>
     </div>
   );
 };
