@@ -1,5 +1,7 @@
 import React from "react"
 import getBooking from "../functions/getBooking";
+import BackButton from "../components/BackButton";
+
 
 export default async function BookingDetails({ params: { id } }) {
     try {
@@ -9,6 +11,7 @@ export default async function BookingDetails({ params: { id } }) {
         return (
             <div>
                 <h1>{`This Booking is with ${bookingData.doctor_name} For ${bookingData.service} and it ends on ${bookingData.end_time}`}</h1>
+                <BackButton />
             </div>
         );
     } catch (error) {
