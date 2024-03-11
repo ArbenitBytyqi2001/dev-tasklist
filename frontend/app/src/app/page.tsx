@@ -14,7 +14,7 @@ const Home: React.FC = async () => {
       <h1>Current booking count: {bookings.length}</h1>
       <BookingList />
       <Link href="postBooking"> 
-      <button>BOOK NOW</button>
+      <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">BOOK NOW</button>
       </Link>
     </div>
   );
